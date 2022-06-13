@@ -1,0 +1,67 @@
+{
+  "name": "@shopify/react-testing",
+  "version": "4.1.0",
+  "license": "MIT",
+  "description": "A library for testing React components according to our conventions",
+  "main": "index.js",
+  "types": "./build/ts/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "matchers": [
+        "./build/ts/matchers/index.d.ts"
+      ]
+    }
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public",
+    "@shopify:registry": "https://registry.npmjs.org"
+  },
+  "author": "Shopify Inc.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shopify/quilt.git",
+    "directory": "packages/react-testing"
+  },
+  "bugs": {
+    "url": "https://github.com/Shopify/quilt/issues"
+  },
+  "homepage": "https://github.com/Shopify/quilt/blob/main/packages/react-testing/README.md",
+  "engines": {
+    "node": "^14.17.0 || >=16.0.0"
+  },
+  "dependencies": {
+    "@shopify/useful-types": "^5.0.0",
+    "jest-matcher-utils": "^26.6.2",
+    "react-reconciler": "^0.28.0"
+  },
+  "files": [
+    "build/",
+    "!build/*.tsbuildinfo",
+    "!build/ts/**/tests/",
+    "index.js",
+    "index.mjs",
+    "index.esnext",
+    "matchers.js",
+    "matchers.mjs",
+    "matchers.esnext"
+  ],
+  "peerDependencies": {
+    "react": ">=16.8.0 <19.0.0",
+    "react-dom": ">=16.8.0 <19.0.0"
+  },
+  "module": "index.mjs",
+  "esnext": "index.esnext",
+  "exports": {
+    "./matchers": {
+      "esnext": "./matchers.esnext",
+      "import": "./matchers.mjs",
+      "require": "./matchers.js"
+    },
+    ".": {
+      "esnext": "./index.esnext",
+      "import": "./index.mjs",
+      "require": "./index.js"
+    }
+  }
+}

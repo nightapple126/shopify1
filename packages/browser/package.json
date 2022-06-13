@@ -1,0 +1,46 @@
+{
+  "name": "@shopify/browser",
+  "version": "3.1.0",
+  "license": "MIT",
+  "description": "Utilities for extracting browser information from user-agents",
+  "main": "index.js",
+  "types": "./build/ts/index.d.ts",
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public",
+    "@shopify:registry": "https://registry.npmjs.org"
+  },
+  "author": "Shopify Inc.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shopify/quilt.git",
+    "directory": "packages/browser"
+  },
+  "bugs": {
+    "url": "https://github.com/Shopify/quilt/issues"
+  },
+  "homepage": "https://github.com/Shopify/quilt/blob/main/packages/browser/README.md",
+  "engines": {
+    "node": "^14.17.0 || >=16.0.0"
+  },
+  "files": [
+    "build/",
+    "!build/*.tsbuildinfo",
+    "!build/ts/**/tests/",
+    "index.js",
+    "index.mjs",
+    "index.esnext"
+  ],
+  "dependencies": {
+    "ua-parser-js": "^0.7.30"
+  },
+  "module": "index.mjs",
+  "esnext": "index.esnext",
+  "exports": {
+    ".": {
+      "esnext": "./index.esnext",
+      "import": "./index.mjs",
+      "require": "./index.js"
+    }
+  }
+}

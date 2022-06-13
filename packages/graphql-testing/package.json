@@ -1,0 +1,68 @@
+{
+  "name": "@shopify/graphql-testing",
+  "version": "6.0.0",
+  "license": "MIT",
+  "description": "Utilities to create mock GraphQL factories",
+  "main": "index.js",
+  "types": "./build/ts/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "matchers": [
+        "./build/ts/matchers/index.d.ts"
+      ]
+    }
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public",
+    "@shopify:registry": "https://registry.npmjs.org"
+  },
+  "author": "Shopify Inc.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shopify/quilt.git",
+    "directory": "packages/graphql-testing"
+  },
+  "bugs": {
+    "url": "https://github.com/Shopify/quilt/issues"
+  },
+  "homepage": "https://github.com/Shopify/quilt/blob/main/packages/graphql-testing/README.md",
+  "engines": {
+    "node": "^14.17.0 || >=16.0.0"
+  },
+  "dependencies": {
+    "apollo-cache-inmemory": ">=1.0.0 <2.0.0",
+    "apollo-client": ">=2.0.0 <3.0.0",
+    "apollo-link": ">=1.0.0 <2.0.0",
+    "graphql": ">=14.5.0 <16.0.0",
+    "jest-matcher-utils": "^26.6.2"
+  },
+  "devDependencies": {
+    "graphql-typed": "^2.0.0"
+  },
+  "files": [
+    "build/",
+    "!build/*.tsbuildinfo",
+    "!build/ts/**/tests/",
+    "index.js",
+    "index.mjs",
+    "index.esnext",
+    "matchers.js",
+    "matchers.mjs",
+    "matchers.esnext"
+  ],
+  "module": "index.mjs",
+  "esnext": "index.esnext",
+  "exports": {
+    "./matchers": {
+      "esnext": "./matchers.esnext",
+      "import": "./matchers.mjs",
+      "require": "./matchers.js"
+    },
+    ".": {
+      "esnext": "./index.esnext",
+      "import": "./index.mjs",
+      "require": "./index.js"
+    }
+  }
+}

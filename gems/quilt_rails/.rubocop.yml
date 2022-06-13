@@ -1,0 +1,45 @@
+inherit_gem:
+  rubocop-shopify: rubocop.yml
+
+AllCops:
+  TargetRubyVersion: 3.1
+  Exclude:
+    - 'node_modules/**/*'
+    - 'test/**/node_modules/**/*'
+    - 'vendor/**/*'
+    - 'bin/*'
+    - '*.gemspec'
+
+Metrics/PerceivedComplexity:
+  Max: 6
+  Exclude:
+    - bin/**/*
+
+Metrics/CyclomaticComplexity:
+  Max: 6
+  Exclude:
+    - bin/**/*
+
+Metrics/ModuleLength:
+  CountComments: true
+  Max: 100
+
+Metrics/AbcSize:
+  Max: 25
+
+Metrics/BlockLength:
+  CountComments: true
+  Max: 5
+  Exclude:
+    - lib/**/*.rake
+    - test/**/*
+    - bin/**/*
+    - Gemfile
+    - config/initializers/**/*
+    - config/environments/**/*
+
+Metrics/ClassLength:
+  CountComments: true
+  Max: 100
+  Exclude:
+    - test/**/*

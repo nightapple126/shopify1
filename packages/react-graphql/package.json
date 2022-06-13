@@ -1,0 +1,63 @@
+{
+  "name": "@shopify/react-graphql",
+  "version": "8.0.1",
+  "license": "MIT",
+  "description": "Tools for creating type-safe and asynchronous GraphQL components for React",
+  "main": "index.js",
+  "types": "./build/ts/index.d.ts",
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public",
+    "@shopify:registry": "https://registry.npmjs.org"
+  },
+  "author": "Shopify Inc.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shopify/quilt.git",
+    "directory": "packages/react-graphql"
+  },
+  "bugs": {
+    "url": "https://github.com/Shopify/quilt/issues"
+  },
+  "homepage": "https://github.com/Shopify/quilt/blob/main/packages/react-graphql/README.md",
+  "engines": {
+    "node": "^14.17.0 || >=16.0.0"
+  },
+  "dependencies": {
+    "@apollo/react-common": ">=3.0.0 <4.0.0",
+    "@apollo/react-hooks": ">=3.0.0 <4.0.0",
+    "@shopify/async": "^4.0.0",
+    "@shopify/react-async": "^5.0.1",
+    "@shopify/react-effect": "^5.0.1",
+    "@shopify/react-hooks": "^3.0.1",
+    "@shopify/react-idle": "^3.0.1",
+    "@shopify/useful-types": "^5.0.0",
+    "apollo-cache-inmemory": ">=1.0.0 <2.0.0",
+    "apollo-client": ">=2.0.0 <3.0.0",
+    "apollo-link": ">=1.0.0 <2.0.0",
+    "graphql-typed": "^2.0.0"
+  },
+  "devDependencies": {
+    "@shopify/react-testing": "^4.1.0"
+  },
+  "files": [
+    "build/",
+    "!build/*.tsbuildinfo",
+    "!build/ts/**/tests/",
+    "index.js",
+    "index.mjs",
+    "index.esnext"
+  ],
+  "peerDependencies": {
+    "react": ">=16.8.0 <19.0.0"
+  },
+  "module": "index.mjs",
+  "esnext": "index.esnext",
+  "exports": {
+    ".": {
+      "esnext": "./index.esnext",
+      "import": "./index.mjs",
+      "require": "./index.js"
+    }
+  }
+}
